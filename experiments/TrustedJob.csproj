@@ -1,0 +1,15 @@
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <OutputType>Library</OutputType>
+    <AssemblyName>TrustedJob</AssemblyName>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <Import Project="..\plugin\CadReferences.props" />
+  <ItemGroup>
+    <Compile Include="$(TrustedScript);ScriptContract.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

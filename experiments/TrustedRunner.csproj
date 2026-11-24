@@ -1,0 +1,18 @@
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <OutputType>Library</OutputType>
+    <AssemblyName>TFlexMcpTrusted</AssemblyName>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <Import Project="..\plugin\CadReferences.props" />
+  <ItemGroup>
+    <Compile Include="TrustedRunner.cs" />
+    <None Include="TFlexMcpTrusted.tfa"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

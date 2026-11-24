@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TFlexHome Condition="'$(TFlexHome)' == ''">$(TFLEX_HOME)</TFlexHome>
+    <TFlexSdkDir Condition="'$(TFlexSdkDir)' == ''">$(TFLEX_SDK_DIR)</TFlexSdkDir>
+    <TFlexHome Condition="'$(TFlexHome)' == '' and '$(TFlexSdkDir)' != ''">$(TFlexSdkDir)\..</TFlexHome>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="TFlexAPI"><HintPath>$(TFlexHome)\Program\TFlexAPI.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="TFlexAPI3D"><HintPath>$(TFlexHome)\Program\TFlexAPI3D.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="TFlexCommandAPI"><HintPath>$(TFlexHome)\Program\TFlexCommandAPI.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+</Project>

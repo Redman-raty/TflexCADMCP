@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "tflex-cad": {
+      "command": "C:\\Projects\\tflex-cad-mcp\\artifacts\\venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Projects\\tflex-cad-mcp\\server\\tflex_mcp.py"
+      ],
+      "env": {
+        "TFLEX_HOME": "C:\\Program Files\\T-FLEX CAD 18",
+        "TFLEX_MCP_TIMEOUT": "180"
+      }
+    }
+  }
+}

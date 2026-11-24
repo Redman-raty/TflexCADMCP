@@ -1,0 +1,36 @@
+/artifacts/
+/.tflex-mcp/
+/local-backups/
+
+# Local settings and client credentials
+.env
+.env.*
+!.env.example
+mcp.json
+mcp.local.json
+mcp.education.local.json
+/tests/*.local.*
+
+# Local CAD documents and autosaves. Add reviewed fixtures explicitly.
+*.grs
+*.bak
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# .NET / IDE
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+TestResults/
+
+# OS
+Thumbs.db
+Desktop.ini
